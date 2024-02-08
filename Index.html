@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Script.js">
+    <link rel="stylesheet" type="text/css" href="D:\javascript\Style.css">
+    <title>Length Converter</title>
+</head>
+<body>
+    
+    <div id="div1">
+        <h1>Guess The Correct Number</h1>
+        Number:<input type="number" id="number1" placeholder="Please enter the number">
+        <button onclick="onclickfunction()">Submit</button>
+        <p id="p1">Your wrong/Right</p>
+        <p id="score1">score:10</p>
+        
+    </div>
+    <script>
+        var totalscore=10;
+        function onclickfunction(){
+            var guessnumber=document.getElementById("number1").value;
+            var guess=document.getElementById("p1");
+            var scores=document.getElementById("score1");
+            var randomnumber=Math.floor(Math.random()*10)+1;
+            
+
+            if(guessnumber==randomnumber)
+            {
+                console.log("Right");
+                guess.textContent="Right"
+                alert("You won...!")
+            }
+            else if(totalscore<=0)
+            {
+                alert("Your eleminated...!")
+            }
+            else{
+                 totalscore=totalscore-1;
+                scores.textContent="score:"+totalscore;
+                guess.textContent="Wrong"
+            }
+        }
+    </script>
+</body>
+
+</html>
