@@ -5,44 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Script.js">
     <link rel="stylesheet" type="text/css" href="D:\javascript\Style.css">
-    <title>Length Converter</title>
+    <title>Todo List</title>
 </head>
 <body>
     
-    <div id="div1">
-        <h1>Guess The Correct Number</h1>
-        Number:<input type="number" id="number1" placeholder="Please enter the number">
-        <button onclick="onclickfunction()">Submit</button>
-        <p id="p1">Your wrong/Right</p>
-        <p id="score1">score:10</p>
-        
-    </div>
-    <script>
-        var totalscore=10;
-        function onclickfunction(){
-            var guessnumber=document.getElementById("number1").value;
-            var guess=document.getElementById("p1");
-            var scores=document.getElementById("score1");
-            var randomnumber=Math.floor(Math.random()*10)+1;
+    Todo content:<input type="text" id="text1" placeholder="Enter your Todo list">
+    <button onclick="fun()">Add</button>
+    <br><br>
+    <ui id="data">
+        <li>Hello
             
+            <button onclick="deleteitem(event)">Delete</button>
+        </li>
+        <br>
 
-            if(guessnumber==randomnumber)
-            {
-                console.log("Right");
-                guess.textContent="Right"
-                alert("You won...!")
-            }
-            else if(totalscore<=0)
-            {
-                alert("Your eleminated...!")
-            }
-            else{
-                 totalscore=totalscore-1;
-                scores.textContent="score:"+totalscore;
-                guess.textContent="Wrong"
-            }
-        }
+    </ui>
+    <script>
+    function fun()
+    {
+        var tex=document.getElementById("text1").value;
+        var da=document.getElementById("data");
+   
+        var listteam=document.createElement("li");
+        listteam.innerHTML=tex +  "<button onclick='deleteitem(event)'>Delete</button>"
+        
+         da.appendChild(listteam);
+    }
+    function deleteitem(event)
+    {
+        event.target.parentElement.remove();
+    }
+        
     </script>
+    
 </body>
 
 </html>
