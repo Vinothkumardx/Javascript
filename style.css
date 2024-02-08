@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+#navbar{
+    background-color: #fd6569;
+    padding: 10px;
+}
+.container{
+    padding: 10px;
+}
+.book-container{
+    background-color: black;
+    padding: 15px;
+    color: white;
+    margin-top: 5px;
+    top: 0px;
+    left: opx;
+    width: 25%;
+}
+.book-container h2{
+    background-color: #fd6569;
+}
+.book-container h5{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.book-container button{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+}
+.buttoncon{
+
+    background-color: #fd6569;
+    color: black;
+    border-radius: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    font-size: 40px;
+    border: none;
+    right: 30px;
+    position: fixed;
+    bottom: 30px;
+    
+}
