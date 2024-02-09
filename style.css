@@ -20,6 +20,8 @@ body{
     top: 0px;
     left: opx;
     width: 25%;
+    display:inline-block;
+    vertical-align: top;
 }
 .book-container h2{
     background-color: #fd6569;
