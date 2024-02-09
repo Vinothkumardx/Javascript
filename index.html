@@ -20,7 +20,20 @@
        <button id="btn">Delete</button>
     </div>
 </div>
-<button class="buttoncon" id="add-popbutton">+</button>
+<div class="popoverlay">
+</div>
+<div class="addpop">
+    <h2>Add Book</h2>
+    <form>
+        <input type="text" id="title-input" placeholder="Enter your book title">
+        <input type="text" id="author-input" placeholder="Enter your author name">
+        <textarea placeholder="shortDescription" id="description-input"></textarea>
+        <button id="book-add-button">Add</button>
+        <button id="book-cancel-button" >cancel</button>
+ 
+    </form>
+    </div>
+<button class="buttoncon" id="add-popbutton" onclick="popupopen()">+</button>
 <body>
     <script src="script.js"></script>
 </body>
