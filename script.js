@@ -1,7 +1,7 @@
 var overlay=document.querySelector(".popoverlay");
 var popup=document.querySelector(".addpop")
 
-function popupopen(){/* cjgdjchkiefjhie*/
+function popupopen(){
 
     overlay.style.display="block";
     popup.style.display="block";
