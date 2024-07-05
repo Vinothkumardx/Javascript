@@ -3,38 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booksky</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+   
+    <title>Form</title>
+    <script src="script.js" defer></script>
+  
+    <style>
+        .error {
+            color: red;
+        }
+        body {
+            text-align: center;
+        }
+        .input-btn {
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
-<div id="navbar">
-    <h1>Booksky</h1>
-</div>
-<div class="container">
-    <div class="book-container">
-        <h2>Rich Dad poor Dad</h2>
-        <h5>Robert</h5>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae animi iure nostrum fugiat alias consectetur delectus, ad veritatis eos vel expedita quasi modi optio voluptatum nulla quibusdam saepe? Repudiandae, distinctio!</p>
-       <button onclick="deletefun(event)">Delete</button>
-    </div>
-</div>
-<div class="popoverlay">
-</div>
-<div class="addpop">
-    <h2>Add Book</h2>
-    <form>
-        <input type="text" id="title-input" placeholder="Enter your book title">
-        <input type="text" id="author-input" placeholder="Enter your author name">
-        <textarea placeholder="shortDescription" id="description-input"></textarea>
-        <button id="book-add-button">Add</button>
-        <button id="book-cancel-button" >cancel</button>
- 
-    </form>
-    </div>
-<button class="buttoncon" id="add-popbutton" onclick="popupopen()">+</button>
 <body>
-    <script src="script.js"></script>
+    <form id="form">
+        <div class="input-btn">
+            <label>Firstname</label>
+            <input type="text" id="fname" name="Firstname" placeholder="Firstname">
+            <div class="error" id="fnameerror"></div>
+        </div>
+        <div class="input-btn">
+            <label>Lastname</label>
+            <input type="text" id="lstname" name="Lastname" placeholder="Lastname">
+            <div class="error" id="lsterror"></div>
+        </div>
+        <div class="input-btn">
+            <label>Email</label>
+            <input type="email" id="email" name="Email" placeholder="Email">
+            <div class="error" id="emailerror"></div>
+        </div>
+        <div class="input-btn">
+            <label>Skills</label>
+            <input type="checkbox" id="skill1" name="skill" value="c#">C#
+            <input type="checkbox" id="skill2" name="skill" value="java">Java
+            <input type="checkbox" id="skill3" name="skill" value="js">JS
+            <div class="error" id="skillerror"></div>
+        </div>
+        <div class="input-btn">
+            <label>Country</label>
+            <select id="coun">
+                <option value="">Select Country</option>
+                <option value="India">India</option>
+                <option value="Aus">Australia</option>
+                <option value="SA">South Africa</option>
+            </select>
+            <div class="error" id="countryerror"></div>
+        </div>
+        <div class="input-btn">
+            <label>Password</label>
+            <input type="password" id="pass" name="password" placeholder="Password">
+            <div class="error" id="passerror"></div>
+        </div>
+        <div class="input-btn">
+            <label>Confirm Password</label>
+            <input type="password" id="confirmpass" name="confirmpassword" placeholder="Confirm Password">
+            <div class="error" id="confirmpasserror"></div>
+        </div>
+        <button id="btn">Register</button>
+    </form>
+    <hr>
+    <table id="tab" border="1">
+        <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Skills</th>
+                <th>Country</th>
+                <th>Password</th>
+                <th>Confirm Password</th>
+            </tr>
+        </thead>
+        <tbody>
+           <tr>
+            <td></td>
+           </tr>
+        </tbody>
+    </table>
 </body>
 </html>
